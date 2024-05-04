@@ -25,7 +25,8 @@ app.use(morgan('tiny'));
 app.use(passportConfg.initialize());
 
 // Static directory
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 // Routes
 app.use(routes);
