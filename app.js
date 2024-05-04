@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const cors = require('cors')
 const routes = require('./routes');
+const path = require('path');
 
 const {CustomError} = require('./utils')
 const passportConfg = require('./config/passportConfig')
