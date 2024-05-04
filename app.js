@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const cors = require('cors')
 const routes = require('./routes');
 const path = require('path');
-
 const {CustomError} = require('./utils')
 const passportConfg = require('./config/passportConfig')
 const userControllers = require('./api/user/controllers')
@@ -26,7 +25,8 @@ app.use(morgan('tiny'));
 app.use(passportConfg.initialize());
 
 // Static directory
-app.use(express.static(path.join(__dirname, 'public/images')));
+app.use(express.static('public'));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 
 // Routes
 app.use(routes);
