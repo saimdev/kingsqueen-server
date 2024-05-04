@@ -1,12 +1,8 @@
-const {validationResult} = require('express-validator');
+const express = require('express');
 
 const fromatedValidationResult = (req)=>{
-    const result = validationResult(req).formatWith(error => error.msg);
-    if(result.isEmpty()){
-        return false;
-    }
     
-    return result.mapped();
+    return ;
 }
 
 module.exports = fromatedValidationResult;
