@@ -25,7 +25,7 @@ app.use(morgan('tiny'));
 app.use(passportConfg.initialize());
 
 // Static directory
-app.use(express.static('src/public'))
+app.use(express.static('public'))
 
 // Routes
 app.use(routes);
